@@ -7,6 +7,12 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 
 	// initialise game objects
 
+	zomboText.loadFromFile("gfx/animZombie.png");
+	zombo.setSize(sf::Vector2f(55, 108));
+	zombo.setPosition(200, 200);
+	zombo.setTexture(&zomboText);
+
+	zombo.setInput(input);
 }
 
 Level::~Level()
@@ -17,19 +23,21 @@ Level::~Level()
 // handle user input
 void Level::handleInput(float dt)
 {
-
+	zombo.handleInput(dt);
 }
 
 // Update game objects
 void Level::update(float dt)
 {
-
+	zombo.update(dt);
 }
 
 // Render level
 void Level::render()
 {
 	beginDraw();
+
+	window->draw(zombo);
 
 	endDraw();
 }
