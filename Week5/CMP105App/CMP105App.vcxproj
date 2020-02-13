@@ -160,8 +160,10 @@
     <ClCompile Include="Framework\Animation.cpp" />
     <ClCompile Include="Framework\Input.cpp" />
     <ClCompile Include="Framework\GameObject.cpp" />
+    <ClCompile Include="Kirby.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Mario.cpp" />
     <ClCompile Include="Zombie.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -172,7 +174,9 @@
     <ClInclude Include="Framework\Animation.h" />
     <ClInclude Include="Framework\Input.h" />
     <ClInclude Include="Framework\GameObject.h" />
+    <ClInclude Include="Kirby.h" />
     <ClInclude Include="Level.h" />
+    <ClInclude Include="Mario.h" />
     <ClInclude Include="Zombie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

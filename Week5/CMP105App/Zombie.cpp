@@ -34,7 +34,7 @@ void Zombie::handleInput(float dt)
 	}
 	else
 	{
-		walk.pause();
+		walk.reset();
 	}
 }
 

@@ -13,6 +13,13 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	zombo.setTexture(&zomboText);
 
 	zombo.setInput(input);
+
+	redluigi.loadFromFile("gfx/MarioSheetT.png");
+	luigi.setSize(sf::Vector2f(25, 28));
+	luigi.setPosition(300, 300);
+	luigi.setTexture(&redluigi);
+
+	luigi.setInput(input);
 }
 
 Level::~Level()
@@ -24,12 +31,14 @@ Level::~Level()
 void Level::handleInput(float dt)
 {
 	zombo.handleInput(dt);
+	luigi.handleInput(dt);
 }
 
 // Update game objects
 void Level::update(float dt)
 {
 	zombo.update(dt);
+	luigi.update(dt);
 }
 
 // Render level
@@ -38,6 +47,7 @@ void Level::render()
 	beginDraw();
 
 	window->draw(zombo);
+	window->draw(luigi);
 
 	endDraw();
 }
